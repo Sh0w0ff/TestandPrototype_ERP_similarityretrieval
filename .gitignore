@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Proprietary data (ERP tables, drawings, derived signals). Never commit. Kept local only.
+*.csv
+text_pipe/*
+visual_pipe/*
+preprocess/*
+PDF drawings/*
+models/*
+cache/*
+scratch/*
+
+# but keep the placeholders so the directory structure is preserved on clone
+!**/.gitkeep
+
+# generated hand off exports (rebuild from KEY_FACTS.md)
+deliverables/
