@@ -96,9 +96,20 @@ As a library:
 RUN THE APP
 -----------
 
-Activate the environment where you installed the requirements, then:
+Two things must be right, or the app will not start:
 
+  1. Run it from inside the repo folder, where app.py lives. Otherwise streamlit reports
+     "File does not exist: app.py".
+  2. Use the same environment that has the requirements installed (the one with torch and
+     streamlit together). Otherwise you get "ModuleNotFoundError: No module named 'torch'"
+     because streamlit was launched from a different environment.
+
+  cd /path/to/this/repo            # the folder that contains app.py
+  conda activate <your-env>        # the environment where you ran pip install -r requirements.txt
   streamlit run app.py
+
+If you are unsure which streamlit you are using, run "which streamlit". It must point inside that
+same environment, not your base install.
 
 Streamlit prints a local URL and opens your browser at it (by default http://localhost:8501).
 In the sidebar, pick a corpus drawing or upload a new PDF, choose Test or Deploy, and press Run.
