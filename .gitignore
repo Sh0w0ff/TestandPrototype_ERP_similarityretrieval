@@ -17,3 +17,6 @@ scratch/*
 
 # company hand off documents (kept outside the code repo)
 deliverables/
+
+# macOS
+.DS_Store
